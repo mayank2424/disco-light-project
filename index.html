@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+html,body{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    
+}
+.light1 {
+    height: 150px;
+    width: 150px;
+    margin-left: 20px;
+    margin-top: 40px;
+    background-color: red;
+    border-radius: 50%;
+    transition: background .5s;
+}
+.light2{
+    height: 150px;
+    width: 150px;
+    margin-left: 220px;
+    margin-top: -150px;
+    background-color: blue;
+    /*border: 1px solid red;*/
+    border-radius: 50%;
+    transition: background .5s;
+}
+.light3{
+     height: 150px;
+    width: 150px;
+    margin-left: 430px;
+    margin-top: -150px;
+    background-color:  blueviolet;
+    /*border: 1px solid red;*/
+    border-radius: 50%;
+    transition: background .5s;
+}
+.light4 {
+     height: 150px;
+    width: 150px;
+    margin-left: 620px;
+    margin-top: -150px;
+    background-color: white;;
+    /*border: 1px solid red;*/
+    border-radius: 50%;
+    transition: background .5s;
+}
+.light5 {
+     height: 150px;
+    width: 150px;
+    margin-left: 820px;
+    margin-top: -150px;
+    background-color: orangered;
+    /*border: 1px solid red;*/
+    border-radius: 50%;
+    transition: background .5s;
+}
+#lights {
+    margin-left: 140px;
+}
+.initialize {
+    height: 30px;
+    width: 120px;
+    margin-left: 40%;
+    margin-top: 20%;
+
+}
+</style>
+</head>
+ <body>
+<div id="lights">
+    <audio src="song.mp3"> </audio>
+        <div class="light1"></div>
+        <div class="light2"></div>
+        <div class= "light3"></div>
+        <div class= "light4"></div>
+        <div class ="light5"></div>
+</div>
+<button class="initialize">Let's Play</button>
+<script src="jquery.js"></script>
+<script>
+// $(document).ready(function() {
+//     setInterval( function() {
+//         $('.light2').animate( { backgroundColor: 'green'}, 1000)
+//         .animate({ backgroundColor: 'blue'}, 1000)
+//         .animate({ backgroundColor: 'red'}, 1000)
+//     }, 1000);
+// });
+$("button").on('click', function changeColor() {
+var audio =document.querySelector('audio');
+ if(audio.paused==true) {
+     audio.play()
+ }
+ else {
+     audio.pause()
+ }
+});
+ ;
+ window.onload= changeColor()
+ function changeColor() {
+        var lights=['green', 'blue', 'red','orange','DarkTurquoise']; //yaha humne lights naam ka array banaya hain
+        var initial =0; //yaha humne initial naam ka variable bana diya or use postion 0 de di ;
+        setInterval(function changeColor() { //yaha humne setinterval function use kara hain kyunki jis se ki function again and again repeat hoye
+            document.querySelector('.light1').style.background= lights[initial];
+            initial++;
+            if(initial==lights.length) 
+            initial=0;
+        },250);
+         setInterval(function() { //yaha humne setinterval function use kara hain kyunki jis se ki function again and again repeat hoye
+            document.querySelector('.light2').style.background= lights[initial];
+            initial++;
+            if(initial==lights.length) 
+            initial=0;
+        },300);
+         setInterval(function() { //yaha humne setinterval function use kara hain kyunki jis se ki function again and again repeat hoye
+            document.querySelector('.light3').style.background= lights[initial];
+            initial++;
+            if(initial==lights.length) 
+            initial=0;
+        },300);
+         setInterval(function() { //yaha humne setinterval function use kara hain kyunki jis se ki function again and again repeat hoye
+            document.querySelector('.light4').style.background= lights[initial];
+            initial++;
+            if(initial==lights.length) 
+            initial=0;
+        },300);
+         setInterval(function() { //yaha humne setinterval function use kara hain kyunki jis se ki function again and again repeat hoye
+            document.querySelector('.light5').style.background= lights[initial];
+            initial++;
+            if(initial==lights.length) 
+            initial=0;
+        },100);
+        
+};
+
+</script>
+
+</body>
+</html>
