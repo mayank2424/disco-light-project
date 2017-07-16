@@ -3,11 +3,12 @@
 <head>
 <style>
 html,body{
-    background-image: url("https://i.ytimg.com/vi/ck4vXjKMIxg/maxresdefault.jpg");
+    background-image: url("https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX2379513.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
+    overflow:hidden;
    
     
 }
@@ -27,7 +28,7 @@ html,body{
     margin-left: 220px;
     margin-top: -160px;
     background-color: blue;
-    border: 4px solid greenyellow;
+    border: 4px solid darkblue;
     border-radius: 50%;
     transition: background .2s;
 }
@@ -36,7 +37,7 @@ html,body{
     width: 150px;
     margin-left: 430px;
     margin-top: -150px;
-    background-color: lawngreen;
+    background-color:  black;
     border: 3px solid red;
     border-radius: 50%;
     transition: background .4s;
@@ -62,20 +63,22 @@ html,body{
     transition: background .5s;
 }
 #lights {
-    margin-left: 140px;
+    margin-left: 160px;
 }
 .initialize {
-    height: 40px;
-    width: 120px;
+    height: 60px;
+    width: 140px;
     margin-left: 45%;
     margin-top: 10%;
     background-color: red;
     border-radius: 12px;
+    font-size: 20px;
+    font-style: italic;
 
 }
  .initialize:hover {
-        height: 50px;
-         width: 140px;
+        height: 70px;
+         width: 150px;
         
  }
 </style>
@@ -114,7 +117,7 @@ window.onload=function() {
 };
  
  function changeColor() {
-        var lights=['white','green', 'blue', 'red','orange','DarkTurquoise']; //yaha humne lights naam ka array banaya hain
+        var lights=['white','lightgreen', 'blue', 'red','orange','DarkTurquoise']; //yaha humne lights naam ka array banaya hain
         var initial =0; //yaha humne initial naam ka variable bana diya or use postion 0 de di ;
         setInterval(function changeColor() { //yaha humne setinterval function use kara hain kyunki jis se ki function again and again repeat hoye
             document.querySelector('.light1').style.background= lights[initial];
